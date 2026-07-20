@@ -20,10 +20,10 @@ cnn = cnn.cuda()
 loss_func = torch.nn.CrossEntropyLoss()
 
 # optimizer
-optimizer = torch.optim.Adam(cnn.parameters(), lr=0.01)
+optimizer = torch.optim.Adam(cnn.parameters(), lr=0.001)
 
 # training
-for epoch in range(10):
+for epoch in range(15):
     for i, (images, labels) in enumerate(train_loader):
         images = images.cuda()
         labels = labels.cuda()
